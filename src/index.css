@@ -72,6 +72,41 @@ app-title {
   margin: 5px;
 }
 
+/* question boxes */
+.questionList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px;
+}
+ .qbox {
+  background-color: #eff0eb;
+  border-radius: 10px;
+  margin: 10px;
+  text-align: center;
+  width: 48%;
+}
+ .qheader {
+  color: #078b9b;
+}
+.options {
+  display:flex;
+  justify-content: space-around;
+}
+ .opt1,
+.opt2 {
+  background-color: #078b9b;
+  border-radius: 10px;
+  color: #cdd1d2;
+  font: 1.5em  'Abril Fatface', cursive;
+  padding: 20px;
+  width: 45%
+}
+ .opt1 {
+  background-color: #078b9b;
+}
+
+
 @media screen and (min-width: 45em) {
    .navList {
     flex-direction: row;
