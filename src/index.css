@@ -79,12 +79,19 @@ app-title {
   justify-content: space-between;
   margin: 20px;
 }
- .qbox {
+ .qcontainer {
   background-color: #eff0eb;
   border-radius: 10px;
   margin: 10px;
   text-align: center;
   width: 48%;
+}
+.close-click {
+  color: #eee;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 10px 0 0;
+  text-align: right;
 }
  .qheader {
   color: #078b9b;
@@ -102,8 +109,17 @@ app-title {
   padding: 20px;
   width: 45%
 }
- .opt1 {
-  background-color: #078b9b;
+.qfooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+.asked {
+  margin: 20px;
+}
+.authorImg {
+  width: 100px;
 }
 
 
