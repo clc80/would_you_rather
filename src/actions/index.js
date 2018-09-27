@@ -1,7 +1,23 @@
-import { _getQuestions, _getUsers } from '../utils/_DATA.js'
- export const GET_QUESTIONS = 'GET_QUESTIONS'
- export const GET_USERS = 'GET_USERS'
- /* API request error handling */
+import { _getCurrentUser, _getQuestions, _getUsers } from '../utils/_DATA.js'
+
+export const GET_USER = 'GET_USER'
+export const GET_QUESTIONS = 'GET_QUESTIONS'
+export const GET_USERS = 'GET_USERS'
+
+//load _getCurrentUser
+const getUser = (user) => {
+  return {
+    type: GET_USER,
+    user
+  }
+}
+
+exprt const loadUser = () => {
+  return dispatch => {
+    return _getCurrentUser()
+    .then((response) => dispatch(getUser(response)))
+  }
+}
 
 //load questions
 const getQuestions = (questions) => {
