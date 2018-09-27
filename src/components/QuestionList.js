@@ -3,9 +3,12 @@ import { connect } from 'react-redux'
 import { loadQuestions, loadUsers } from '../actions'
 import { withRouter } from 'react-router-dom'
 import Question from './Question'
- class Questions extends Component {
+import Spinner from './Spinner'
+
+class Questions extends Component {
 
    state = {
+    loading: true,
     questions: [],
     users: {},
     user: null
@@ -13,10 +16,18 @@ import Question from './Question'
    componentDidMount() {
     this.props.getQuestions()
     .then(this.props.getUsers())
+    .then( () => this.setState({loading:false}))
   }
 
    render() {
      const { questions, users, user } = this.props
+     const {loading} = this.state
+
+     if (loading) {
+       return(
+       <Spinner />
+       )
+     }
 
      return (
       <section className="questionList">

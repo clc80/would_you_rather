@@ -1,8 +1,12 @@
+import husky1 from '../images/husky1.jpg'
+import husky2 from '../images/husky2.jpg'
+import husky3 from '../images/husky3.jpg'
+
 let users = {
   sarah_edo: {
     id: 'john_doe',
     name: 'John Doe',
-    avatarURL: 'https://tylermcginnis.com/would-you-rather/tyler.jpg',
+    avatarURL: husky1,
     answers: {
       "8xf0y6ziyjabvozdd253nd": 'optionOne',
       "6ni6ok3ym7mf1p33lnez": 'optionOne',
@@ -14,7 +18,7 @@ let users = {
   tylermcginnis: {
     id: 'tylermcginnis',
     name: 'Tyler McGinnis',
-    avatarURL: 'https://tylermcginnis.com/would-you-rather/tyler.jpg',
+    avatarURL: husky2,
     answers: {
       "vthrdm985a262al8qx3do": 'optionOne',
       "xj352vofupe1dqz9emx13r": 'optionTwo',
@@ -24,7 +28,7 @@ let users = {
   dan_abramov: {
     id: 'ann_rivers',
     name: 'Ann Rivers',
-    avatarURL: 'https://tylermcginnis.com/would-you-rather/tyler.jpg',
+    avatarURL: husky3,
     answers: {
       "xj352vofupe1dqz9emx13r": 'optionOne',
       "vthrdm985a262al8qx3do": 'optionTwo',
