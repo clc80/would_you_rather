@@ -1,6 +1,6 @@
 import { _getQuestions, _getUsers } from '../utils/_DATA.js'
  export const GET_QUESTIONS = 'GET_QUESTIONS'
- expoert const GET_USERS = 'GET_USERS'
+ export const GET_USERS = 'GET_USERS'
  /* API request error handling */
 
 //load questions
@@ -12,8 +12,8 @@ const getQuestions = (questions) => {
 }
  export const loadQuestions = () => {
   return dispatch => {
-    _getQuestions()
-      .then((response) => {
+    return _getQuestions()
+    .then((response) => {
         // convert questions to array
         const qIndices = Object.keys(response)
         const questions = qIndices.map(index =>  response[index] )
@@ -29,9 +29,9 @@ const getUsers = (users) => {
   }
 }
 
-export const loadUsers = () = {
+export const loadUsers = () => {
   return dispatch => {
-    _getUsers()
-      .then((response) => dispatch(getUsers(response)))
+    return _getUsers()
+    .then((response) => dispatch(getUsers(response)))
   }
 }

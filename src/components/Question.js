@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 
    static propTypes = {
     question: PropTypes.object.isRequired,
-    author: PropTypes.oject.isRequired
+    author: PropTypes.object.isRequired
   }
   state = {
     showDetails: false
@@ -31,7 +31,7 @@ import PropTypes from 'prop-types'
             <h2 className="qheader">Would you rather</h2>
             <div className="options">
               <div className="opt1">
-                {questions.optionOne.text}
+                {question.optionOne.text}
               </div>
               <div className="opt2">
                 {question.optionTwo.text}
@@ -39,7 +39,7 @@ import PropTypes from 'prop-types'
             </div>
           <div className="qfooter">
             <p className = "asked"> asked by
-              <br/>{question.author}
+              <br/>{author.name}
             </p>
             <img className="authorImg" src={author.avatarURL} alt={author.name} />
         </div>
@@ -48,4 +48,5 @@ import PropTypes from 'prop-types'
       </article>
     )
    }
- export default Question
+ }
+ export default Question;

@@ -80,11 +80,15 @@ app-title {
   margin: 20px;
 }
  .qcontainer {
+   width: 100%;
+ }
+ .qbox {
   background-color: #eff0eb;
   border-radius: 10px;
-  margin: 10px;
+  margin: 10px auto;
+  padding: 10px;
   text-align: center;
-  width: 48%;
+  width: 95%;
 }
 .close-click {
   color: #eee;
@@ -124,6 +128,10 @@ app-title {
 
 
 @media screen and (min-width: 45em) {
+  .app-title {
+   font-size: 3.5em;
+ }
+
    .navList {
     flex-direction: row;
   }
@@ -131,21 +139,27 @@ app-title {
     border-bottom-left-radius:0;
     border-bottom-right-radius: 0;
     flex-direction: row;
+    font-size: 1.25em;
   }
    .qblock {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     margin: 0 5px;
   }
+ .qcontainer {
+   width: 50%;
  }
- @media screen and (min-width: 45em) {
-   .app-title {
-    font-size: 3.5em;
-  }
-   .navButton {
+  .opt1, .opt2 {
     font-size: 1.25em;
   }
-}
+  }
+
+
+  @media screen and (min-width: 60em) {
+    .opt1, .opt2 {
+      font-size: 1.5em;
+    }
+  }
 
 /*
 light gray: #eff0eb;

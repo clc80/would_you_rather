@@ -7,15 +7,16 @@ import Question from './Question'
 
    state = {
     questions: [],
-    users: {}
+    users: {},
+    user: null
   }
    componentDidMount() {
     this.props.getQuestions()
-    this.props.getUsers()
+    .then(this.props.getUsers())
   }
 
    render() {
-     const { questions, users } = this.props
+     const { questions, users, user } = this.props
 
      return (
       <section className="questionList">
@@ -25,7 +26,7 @@ import Question from './Question'
             <Question
               question={question}
               key={question.id}
-              author={users[questions.author]}
+              author={users[question.author]}
             />
           )) : <div className="not-available">
             No questions are available.  <br/>
@@ -38,7 +39,8 @@ import Question from './Question'
    const mapStateToProps = (state) => {
   return {
     questions: state.questions,
-    users: state.users
+    users: state.users,
+    user: state.user
   }
  }
 const mapDispatchToProps = (dispatch) => {
