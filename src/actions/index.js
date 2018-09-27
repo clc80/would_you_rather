@@ -12,7 +12,7 @@ const getUser = (user) => {
   }
 }
 
-exprt const loadUser = () => {
+export const loadUser = () => {
   return dispatch => {
     return _getCurrentUser()
     .then((response) => dispatch(getUser(response)))

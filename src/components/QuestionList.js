@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { loadeUser, loadQuestions, loadUsers } from '../actions'
+import { loadUser, loadQuestions, loadUsers } from '../actions'
 import { withRouter } from 'react-router-dom'
 import Question from './Question'
 import Spinner from './Spinner'
@@ -24,7 +24,7 @@ class Questions extends Component {
         .then( () => this.setState({loading: false}))
       } else {
         this.props.getUsers()
-        .then( () => this.setState({loading: false, modalOpen: true))
+        .then( () => this.setState({loading: false, modalOpen: true}))
       }
     })
   }
